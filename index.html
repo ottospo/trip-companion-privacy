@@ -43,6 +43,7 @@
 <main>
   <h1>TrailTracker Privacy Policy</h1>
   <p class="date">Effective date: November 12, 2026</p>
+  <p class="date">Last updated: November 21, 2026</p>
   <p>TrailTracker is provided by Otto Sponring.</p>
 
   <h2>Location</h2>
@@ -52,18 +53,55 @@
     screen is off, and the app displays a tracking notification.</p>
 
   <h2>Storage and sharing</h2>
-  <p>The app keeps the current trip and trail in device memory. They remain
-    available after you stop tracking but are lost when you start a new trip
-    or the app process ends, including when the device restarts. The app does
-    not upload your trail or location to the developer, and it does not
-    include advertising or analytics services. Android and the device's
+  <p>The current trip is kept in device memory. When you stop a trip with GPS
+    points, the app saves a GPX file in the device's shared Main Storage/Trails
+    folder. Before tracking, you select that folder once in the system picker.
+    Older trails remain in Documents/Trails; on Android 9 and earlier,
+    storage permission is needed to share those older files.
+    Filenames contain the local date and time when the trip stopped.
+    Holding Photo opens an in-app camera preview. Releasing it attempts to capture
+    and automatically save a photo in Trails, without a keep-or-delete prompt.
+    When available, the app attempts to add the last trail location recorded
+    when Photo was released to the photo's location metadata and to mark it
+    as a waypoint in the GPX file. A photo may be saved without a location
+    if no trail location is available. If updating metadata fails, an original
+    copy may remain; check the photo's location before sharing it. The photo is
+    not included in the GPX file. Camera permission is required for the preview and photo.
+    After saving a GPX trail, you can choose to keep or delete it.
+    You can delete photos later using your device's file manager or a compatible app.
+    Saved files remain when a new trip starts, the device restarts, or the app
+    is uninstalled. Other apps with access to shared storage may be able to
+    read these files. You can open or
+    share a saved file with another app; the recipient's privacy practices
+    apply. The app does not upload your trail or location to the developer, and it does not
+    include third-party advertising networks or analytics services. Android and the device's
     location provider may process location information under their own terms
     and settings.</p>
 
+  <h2>Trail preview and maps</h2>
+  <p>Preview displays a snapshot of the current trail without stopping tracking.
+    The app writes a temporary GPX snapshot in its private cache and attempts
+    to delete it after loading the map. A temporary file may remain if cleanup
+    fails or the app is interrupted; Android may clear cached files later.
+    Preview does not create a saved trail; stopping a trip with GPS points saves
+    the permanent GPX file. Photo processing also uses a temporary private
+    cache copy, which the app attempts to delete after processing.</p>
+  <p>When you choose to preview or view a saved trail on the map, the app requests map
+    tiles from OpenStreetMap for the Street map or OpenTopoMap for the Terrain map.
+    The selected provider receives your IP address and the
+    map area you view; the GPX file itself is not uploaded. Map tiles may be
+    cached on your device. The map requires an internet connection when the
+    required tiles are not cached. See the
+    <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap
+    privacy policy</a> and the <a href="https://opentopomap.org/">OpenTopoMap
+    website</a> for information about those providers.</p>
+
   <h2>Your choices</h2>
   <p>You can pause or stop tracking in the app, and you can revoke its
-    location permission in Android settings. Starting a new trip clears the
-    previous trail.</p>
+    location or camera permission in Android settings. Starting a new trip clears the
+    previous trail from the display, but does not delete saved GPX files.</p>
+  <p>When the app starts without a current trip, it displays a sample trail.
+    The sample is not your location and is replaced when you start a trip.</p>
   <p>Following the book link opens Amazon in your browser or another app. TrailTracker
     does not send your trip or location to Amazon through this link. Amazon's privacy policy
     applies when you visit its site.</p>
