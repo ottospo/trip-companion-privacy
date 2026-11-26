@@ -16,13 +16,12 @@ header{padding:clamp(28px,5vw,52px) clamp(24px,6vw,60px) 34px;background:linear-
 @media print{body{background:white;padding:0}main{border:0;box-shadow:none}header{background:white}.content{padding-top:20px}a{color:inherit}}
 
 /* Single, clearly identified project-support advertisement */
-.book{margin:34px 0 0;padding:20px;display:grid;grid-template-columns:122px minmax(0,1fr);gap:20px;align-items:start;background:#f3f8f5;border:1px solid #d5e7da;border-radius:15px}
+.book{margin:34px 0 0;padding:20px;display:flow-root;background:#f3f8f5;border:1px solid #d5e7da;border-radius:15px}
 .book h2{margin:0 0 9px}.book p{font-size:.95rem;line-height:1.65;margin:0 0 13px}
-.cover{display:block;max-width:100%}.cover img{width:100%;height:auto;display:block;aspect-ratio:1324/2048;object-fit:cover;border-radius:7px;box-shadow:0 5px 16px rgba(0,0,0,.13)}
+.cover{display:block;float:left;width:122px;max-width:100%;margin:0 20px 12px 0}.cover img{width:100%;height:auto;display:block;aspect-ratio:1324/2048;object-fit:cover;border-radius:7px;box-shadow:0 5px 16px rgba(0,0,0,.13)}
 .amazon{display:inline-block;padding:11px 15px;border-radius:9px;background:#176449;color:#fff;text-decoration:none;font-weight:700;line-height:1.35}.amazon:hover{background:#0f4d38}
 .book .book-note{margin-top:12px;color:#586d61;font-size:.85rem}
-@media(max-width:540px){.book{grid-template-columns:94px minmax(0,1fr);gap:13px;padding:14px}.book h2{font-size:1.08rem}}
-@media(max-width:350px){.book{grid-template-columns:1fr}.cover{max-width:130px}}
+@media(max-width:540px){.book{padding:14px}.cover{width:94px;margin-right:13px}.book h2{font-size:1.08rem}}
 </style>
 </head>
 <body>
